@@ -37,7 +37,7 @@ program
       console.log(`ORIGIN: ${origin}`)
       console.log(`BRANCH: ${branch}`)
       console.log(`MESSAGE: ${message}`)
-      console.log(`Please wait .......`)
+      console.log(`MESSAGE: ${message}`)
    });
 
 program.parse();
