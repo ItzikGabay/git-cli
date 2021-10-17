@@ -23,7 +23,7 @@ program
 
       exec(`git add . && git commit -m ${message} && git push ${origin} ${branch}`, (error, stdout, stderr) => {
          if (error) {
-            console.log(`GIT-CLI ERR: ${error.message}`);
+            console.log(`GIT-CLI: ERR: ${error.message}`);
             return;
          }
          if (stderr) {

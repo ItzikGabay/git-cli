@@ -23,14 +23,14 @@ program
 
       exec(`git add . && git commit -m ${message} && git push ${origin} ${branch}`, (error, stdout, stderr) => {
          if (error) {
-            console.log(`GIT-CLI ERR: ${error.message}`);
+            console.log(`ERR: ${error.message}`);
             return;
          }
          if (stderr) {
-            console.log(`GIT-CLI: ${stderr}`);
+            console.log(`GIT-CLIste: ${stderr}`);
             return;
          }
-         console.log(`GIT-CLI: ${stdout}`);
+         console.log(`stdout: ${stdout}`);
       });
 
       console.log('Commiting to github...')
