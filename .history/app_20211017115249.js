@@ -70,7 +70,8 @@ program
          }
          console.log(`GIT-CLI: ${stdout}`);
       });
-      commitingUI(origin, branch, message)
+
+
    });
 
 program.parse();

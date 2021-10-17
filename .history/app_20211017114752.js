@@ -32,25 +32,11 @@ function parseArgsToShellCommand(arr) {
 }
 
 /**
- *  Console UI for showing user inputs.
- *
- *  @params {Object} id The object of 
- *  @return {<Promise>} - The array of 
+*  
+*  
+*  @desc 
 **/
-function commitingUI(origin, branch, message) {
-   console.log('Commiting to github...')
-   console.log(`ORIGIN: ${origin}`)
-   console.log(`BRANCH: ${branch}`)
-   console.log(`MESSAGE: ${message}`)
-   console.log(`Executing..`)
-}
-
-
-/**
- *  COMMAND:
- * $ gcl acp [origin] [branch] [message]
- *
-**/
+// $ gcl acp [origin] [branch] [message]
 program
    .command('acp')
    .argument('<origin>')
@@ -70,7 +56,12 @@ program
          }
          console.log(`GIT-CLI: ${stdout}`);
       });
-      commitingUI(origin, branch, message)
+
+      console.log('Commiting to github...')
+      console.log(`ORIGIN: ${origin}`)
+      console.log(`BRANCH: ${branch}`)
+      console.log(`MESSAGE: ${message}`)
+      console.log(`Executing..`)
    });
 
 program.parse();

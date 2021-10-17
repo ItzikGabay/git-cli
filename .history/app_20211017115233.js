@@ -37,13 +37,7 @@ function parseArgsToShellCommand(arr) {
  *  @params {Object} id The object of 
  *  @return {<Promise>} - The array of 
 **/
-function commitingUI(origin, branch, message) {
-   console.log('Commiting to github...')
-   console.log(`ORIGIN: ${origin}`)
-   console.log(`BRANCH: ${branch}`)
-   console.log(`MESSAGE: ${message}`)
-   console.log(`Executing..`)
-}
+function 
 
 
 /**
@@ -70,7 +64,8 @@ program
          }
          console.log(`GIT-CLI: ${stdout}`);
       });
-      commitingUI(origin, branch, message)
+
+
    });
 
 program.parse();
