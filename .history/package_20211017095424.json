@@ -1,0 +1,16 @@
+{
+  "name": "git_cli_v4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "coffee-shop": "./app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

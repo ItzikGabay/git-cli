@@ -1,0 +1,16 @@
+{
+  "name": "git_cli_v4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js test"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "gcl": "./app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
