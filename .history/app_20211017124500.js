@@ -99,7 +99,7 @@ program
    .action((origin, branch, message) => {
       message = parseMessageFromInput(message);
       const commandsSeriesByOrder = ['git add .', 'git commit -m', 'git push']
-      const commandToExec = parseArrToSingleCommand(commandsSeriesByOrder, origin, branch, message)
+      const commandToExec = parseArrToSingleCommand(commandsSeries, origin, branch, message)
 
       exec(commandToExec, (error, stdout, stderr) => {
          if (error) {
