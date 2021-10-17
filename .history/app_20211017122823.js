@@ -57,11 +57,9 @@ const gitCommands = {
  *  for exp: ['git add .', 'git push -m", "test"] 
  *  to -> 'git add . && git push -m "CLI Deploy" && test' String
  *
- *  @param {Array} arr The array of commands
- *  @param {String} origin Origin name
- *  @param {String} branch Branch name
- *  @param {String} message Meesage of commit
- *  @return {String} - Full command as string
+ *  @param {Object} arr The array of commands
+ *  @param {Object} arr The array of commands
+ *  @return {<Promise>} - The array of 
 **/
 function parseArrToSingleCommand(arr, origin, branch, message) {
    let fullCommand = ""

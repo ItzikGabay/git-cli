@@ -61,7 +61,7 @@ const gitCommands = {
  *  @param {String} origin Origin name
  *  @param {String} branch Branch name
  *  @param {String} message Meesage of commit
- *  @return {String} - Full command as string
+ *  @return {String} - The array of 
 **/
 function parseArrToSingleCommand(arr, origin, branch, message) {
    let fullCommand = ""

@@ -34,9 +34,7 @@ function parseArgsToShellCommand(arr) {
 /**
  *  Console UI for showing user inputs.
  *
- *  @param {String} origin Repo origin name
- *  @param {String} branch Repo branch name
- *  @param {String} origin Commit message
+ *  @return {<Promise>} - The array of 
 **/
 function commitingUI(origin, branch, message) {
    console.log('Commiting to github...')
@@ -44,45 +42,6 @@ function commitingUI(origin, branch, message) {
    console.log(`BRANCH: ${branch}`)
    console.log(`MESSAGE: ${message}`)
    console.log(`Executing..`)
-}
-
-const gitCommands = {
-   commit: "git commit -m",
-   add: 'git add .',
-   push: 'git push'
-}
-
-/**
- *  Parsing array of series of commands.
- *  for exp: ['git add .', 'git push -m", "test"] 
- *  to -> 'git add . && git push -m "CLI Deploy" && test' String
- *
- *  @param {Array} arr The array of commands
- *  @param {String} origin Origin name
- *  @param {String} branch Branch name
- *  @param {String} message Meesage of commit
- *  @return {String} - Full command as string
-**/
-function parseArrToSingleCommand(arr, origin, branch, message) {
-   let fullCommand = ""
-   for (let [index, cmd] of arr.entries()) {
-      let args = cmd;
-      args = cmd.split(' ')[1]
-      if (args === "commit") {
-         cmd = `${cmd} "${message}"`
-      }
-      if (args === "push") {
-         cmd = `${cmd} ${origin} ${branch}`
-      }
-
-      if (index !== arr.length - 1) {
-         fullCommand += cmd + " && ";
-      } else {
-         fullCommand += cmd
-
-      }
-      return fullCommand;
-   }
 }
 
 
@@ -114,3 +73,10 @@ program
    });
 
 program.parse();
+
+
+/**
+ * TODO:
+ * create gitignore file
+ * push to heroku / other platforms by --heroku
+ */

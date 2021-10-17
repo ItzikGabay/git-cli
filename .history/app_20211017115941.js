@@ -52,39 +52,6 @@ const gitCommands = {
    push: 'git push'
 }
 
-/**
- *  Parsing array of series of commands.
- *  for exp: ['git add .', 'git push -m", "test"] 
- *  to -> 'git add . && git push -m "CLI Deploy" && test' String
- *
- *  @param {Array} arr The array of commands
- *  @param {String} origin Origin name
- *  @param {String} branch Branch name
- *  @param {String} message Meesage of commit
- *  @return {String} - Full command as string
-**/
-function parseArrToSingleCommand(arr, origin, branch, message) {
-   let fullCommand = ""
-   for (let [index, cmd] of arr.entries()) {
-      let args = cmd;
-      args = cmd.split(' ')[1]
-      if (args === "commit") {
-         cmd = `${cmd} "${message}"`
-      }
-      if (args === "push") {
-         cmd = `${cmd} ${origin} ${branch}`
-      }
-
-      if (index !== arr.length - 1) {
-         fullCommand += cmd + " && ";
-      } else {
-         fullCommand += cmd
-
-      }
-      return fullCommand;
-   }
-}
-
 
 /**
  *  COMMAND:
@@ -99,7 +66,7 @@ program
    .action((origin, branch, message) => {
       message = parseArrToMessage(message);
 
-      exec(`git add . && git commit -m ${message} && git push ${origin} ${branch}`, (error, stdout, stderr) => {
+      exec(`${gitCommands.add} && ${gitCommands.add} ${message} && git push ${origin} ${branch}`, (error, stdout, stderr) => {
          if (error) {
             console.log(`GIT-CLI ERR: ${error.message}`);
             return;
