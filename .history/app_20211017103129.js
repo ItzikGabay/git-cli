@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+
 
 // const commander = require('../'); // include commander in git clone of commander repo
 const commander = require('commander'); // (normal include)

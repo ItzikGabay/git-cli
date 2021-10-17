@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 // const commander = require('../'); // include commander in git clone of commander repo
 const commander = require('commander'); // (normal include)
 const program = new commander.Command();
@@ -40,10 +38,3 @@ program
    });
 
 program.parse();
-
-
-/**
- * TODO:
- * create gitignore file
- * push to heroku / other platforms by --heroku
- */

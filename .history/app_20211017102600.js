@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 // const commander = require('../'); // include commander in git clone of commander repo
 const commander = require('commander'); // (normal include)
 const program = new commander.Command();
@@ -12,7 +10,6 @@ function parseArrToMessage(arr) {
    return arr;
 }
 
-// gcl acp
 program
    .command('acp')
    .argument('<origin>')
@@ -21,7 +18,7 @@ program
    .action((origin, branch, message) => {
       message = parseArrToMessage(message);
 
-      exec(`git add . && git commit -m ${message} && git push ${origin} ${branch}`, (error, stdout, stderr) => {
+      exec(`git add . && git commit -m ${message} && `, (error, stdout, stderr) => {
          if (error) {
             console.log(`error: ${error.message}`);
             return;
@@ -40,10 +37,3 @@ program
    });
 
 program.parse();
-
-
-/**
- * TODO:
- * create gitignore file
- * push to heroku / other platforms by --heroku
- */
