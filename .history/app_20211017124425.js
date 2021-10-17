@@ -101,7 +101,7 @@ program
       const commandsSeries = ['git add .', 'git commit -m', 'git push']
       const commandToExec = parseArrToSingleCommand(commandsSeries, origin, branch, message)
 
-      exec(commandToExec, (error, stdout, stderr) => {
+      exec('ls', (error, stdout, stderr) => {
          if (error) {
             console.log(`GIT-CLI ERR: ${error.message}`);
             return;

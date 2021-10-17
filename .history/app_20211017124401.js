@@ -69,7 +69,7 @@ function parseArrToSingleCommand(arr, origin, branch, message) {
       let args = cmd;
       args = cmd.split(' ')[1]
       if (args === "commit") {
-         cmd = `${cmd} ${message}`
+         cmd = `${cmd} ${message}"`
       }
       if (args === "push") {
          cmd = `${cmd} ${origin} ${branch}`
@@ -98,10 +98,11 @@ program
    .argument('<message...>', 'values to be summed')
    .action((origin, branch, message) => {
       message = parseMessageFromInput(message);
-      const commandsSeries = ['git add .', 'git commit -m', 'git push']
-      const commandToExec = parseArrToSingleCommand(commandsSeries, origin, branch, message)
+      let commandsSeries = ['git add .', 'git commit -m', 'git push']
+      let commandToExec = parseArrToSingleCommand(commandsSeries, origin, branch, message)
+      console.log(commandToExec);
 
-      exec(commandToExec, (error, stdout, stderr) => {
+      exec('ls', (error, stdout, stderr) => {
          if (error) {
             console.log(`GIT-CLI ERR: ${error.message}`);
             return;

@@ -98,10 +98,10 @@ program
    .argument('<message...>', 'values to be summed')
    .action((origin, branch, message) => {
       message = parseMessageFromInput(message);
-      const commandsSeries = ['git add .', 'git commit -m', 'git push']
+      let commandsSeries = ['git add .', 'git commit -m', 'git push']
       const commandToExec = parseArrToSingleCommand(commandsSeries, origin, branch, message)
 
-      exec(commandToExec, (error, stdout, stderr) => {
+      exec('ls', (error, stdout, stderr) => {
          if (error) {
             console.log(`GIT-CLI ERR: ${error.message}`);
             return;
