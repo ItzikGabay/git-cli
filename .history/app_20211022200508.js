@@ -124,14 +124,6 @@ program
       let result = {
          [key]: value
       }
-      filesystem.writeFile(result)
-   });
-
-program
-   .command('readLocal')
-   .argument('<key>')
-   .action((key) => {
-      filesystem.readLocal(key)
    });
 
 program.parse();

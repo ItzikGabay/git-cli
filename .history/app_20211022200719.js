@@ -130,8 +130,11 @@ program
 program
    .command('readLocal')
    .argument('<key>')
-   .action((key) => {
-      filesystem.readLocal(key)
+   .action((key, value) => {
+      let result = {
+         [key]: value
+      }
+      filesystem.readLocal(result)
    });
 
 program.parse();

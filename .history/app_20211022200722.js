@@ -131,7 +131,7 @@ program
    .command('readLocal')
    .argument('<key>')
    .action((key) => {
-      filesystem.readLocal(key)
+      filesystem.readLocal(result)
    });
 
 program.parse();

@@ -3,7 +3,6 @@
 const commander = require('commander');
 const program = new commander.Command();
 const { exec } = require("child_process");
-const filesystem = require("./filesystem");
 
 /**
 *  Parse the user input into message.
@@ -122,16 +121,9 @@ program
    .argument('<value>')
    .action((key, value) => {
       let result = {
-         [key]: value
+         key: value
       }
-      filesystem.writeFile(result)
-   });
-
-program
-   .command('readLocal')
-   .argument('<key>')
-   .action((key) => {
-      filesystem.readLocal(key)
+      console.log(result);
    });
 
 program.parse();
