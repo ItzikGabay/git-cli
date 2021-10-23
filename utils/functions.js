@@ -42,7 +42,7 @@ function commitingUI(origin, branch, message) {
 
 /**
  *  Parsing array of series of commands.
- *  for exp: ['git add .', 'git push -m", "test"] 
+ *  for exp: ['git add .', 'git push -m", "test"]
  *  to -> 'git add . && git push -m "CLI Deploy" && test' String
  *
  *  @param {Array} arr The array of commands
