@@ -1,1 +1,11 @@
+# Project files
 **/node_modules
+
+# Main personal app config file
+/cli.conf.json
+
+# VSCODE files
+/.history
+
+# ignore test folder
+/services/test
