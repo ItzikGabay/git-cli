@@ -21,11 +21,7 @@ module.exports = (origin, branch, message) => {
 
             exec(commandToExec, (error, stdout, stderr) => {
                if (error) {
-                  console.log(`GIT-CLI ERR: ${error.message}`);
-                  return;
-               }
-               if (stderr) {
-                  console.log(`GIT-CLI: ${stderr}`);
+                  console.log(`GIT-CLI Error: ${error.message}`);
                   return;
                }
                console.log(`GIT-CLI: ${stdout}`);
