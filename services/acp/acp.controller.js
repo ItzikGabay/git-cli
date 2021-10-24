@@ -1,4 +1,4 @@
-const App = require('../../utils/functions');
+const App = require('../../utils/drivers');
 const { exec } = require("child_process");
 const inquirer = require('inquirer');
 
@@ -31,7 +31,7 @@ module.exports = (origin, branch, message) => {
                console.log(`GIT-CLI: ${stdout}`);
             });
          } else {
-            console.log('Operation canceled');
+            console.log('GIT-CLI Operation canceled.. You can try again.');
          }
       });
 }

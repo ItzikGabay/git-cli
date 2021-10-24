@@ -15,7 +15,6 @@ const fileName = './cli.conf.json';
  * @param {String} key key that you want to search in config.
  */
 async function readLocal(key) {
-  console.log('readLocal:', key);
   let dataInConfigFile = await fsPromise.readFile(fileName)
   dataInConfigFile = JSON.parse(dataInConfigFile)
 
@@ -23,6 +22,7 @@ async function readLocal(key) {
     return console.log('This key is not exist.')
   } else {
     console.log(dataInConfigFile[key]);
+    return dataInConfigFile[key];
   }
 }
 
