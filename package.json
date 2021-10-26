@@ -8,7 +8,7 @@
   },
   "preferGlobal": true,
   "bin": {
-    "gcl": "./lib/app.js"
+    "$": "./lib/app.js"
   },
   "keywords": [],
   "author": "",
