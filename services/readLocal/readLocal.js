@@ -8,7 +8,8 @@ const filesystem = require("../../utils/filesystem");
 module.exports = (program) => {
 
    program
-      .command('readLocal')
+      .command('read')
+      .description('Read local variable')
       .argument('<key>')
       .action((key) => {
          filesystem.readLocal(key)

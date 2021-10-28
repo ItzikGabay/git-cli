@@ -7,7 +7,8 @@ const filesystem = require("../../utils/filesystem");
 **/
 module.exports = (program) => {
    program
-      .command('addLocal')
+      .command('write')
+      .description('Add local variable')
       .argument('<key>')
       .argument('<value>')
       .action((key, value) => {

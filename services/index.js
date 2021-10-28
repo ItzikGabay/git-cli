@@ -9,12 +9,12 @@ const kpCommand = require("./kp/kp");
 
 const loadServices = (program) => {
    // testCommand(program)
-   kpCommand(program)
+   sCommand(program)
+   rCommand(program)
    acpCommand(program)
    addLocalCommand(program)
    readLocalCommand(program)
-   rCommand(program)
-   sCommand(program)
+   kpCommand(program)
 }
 
 module.exports = loadServices;

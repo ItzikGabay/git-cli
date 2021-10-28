@@ -8,6 +8,7 @@ const acpController = require('./acp.controller');
 module.exports = (program) => {
    program
       .command('acp')
+      .description('Add, commit, and push')
       .argument('<origin>')
       .argument('<branch>')
       .argument('<message...>', 'values to be summed')
