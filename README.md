@@ -22,6 +22,21 @@
   </a>
 </p>
 
-## Demo
+## Commands
 
-SOON!
+Usage: $ [command] [value] [--options]
+
+- acp [origin] [message] - GIT add, commit, push (No need for "")
+- add [variable] - Add local variable saved in a file.
+- read [variable] - Read local variable saved in a file.
+- kp [port-number] - Killing specific port number.
+- r - GIT remote - Getting all git remotes addresses.
+- s - GIT status - Getting current git status.
+- cm [component-name] - Creating React folder, component, and SCSS files with the name provided.
+
+## Demo
+How it is looks like:
+![demo1](https://github.com/ItzikGabay/ItzikGabay/blob/main/git-cli-images/sc1.png?raw=true)
+
+ACP command: (Add, Commit, Push)
+![demo1](https://github.com/ItzikGabay/ItzikGabay/blob/main/git-cli-images/sc-gif-2.gif?raw=true)
